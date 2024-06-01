@@ -1,9 +1,19 @@
-import tkinter,tkinter.messagebox,customtkinter,tkinter.messagebox
+import tkinter as tk,tkinter.messagebox,customtkinter,tkinter.messagebox
 import os
 import sys
 from PIL import Image
 import module.process as ps,module.mathod as md
 from CTkTable import *
+
+def reloadTabview():
+    line=ps.settingGet("tabview")
+    print(line)
+    main.tabview = customtkinter.CTkTabview(main, width=250)
+    main.tabview.grid(row=0, column=2,rowspan=4,padx=(20, 20), pady=(20, 20), sticky="nsew")
+    if line[0]=='1': main.tabview.add("  단순이동평균법  ")
+    if line[1]=='1': main.tabview.add(  "가중이동평균법  ")
+    if line[2]=='1': main.tabview.add("  지수평활법  ")
+    if line[3]=='1': main.tabview.add("  Tensorflow  ")
 
 #프로그램 실행 위치 지정
 scriptPath = os.path.abspath(__file__)
@@ -20,6 +30,7 @@ customtkinter.set_default_color_theme("green")
 main.title("수평적 패턴의 수요 예측 프로그램")
 main.geometry(f"{1500}x{800}")
 main.minsize(1500,800)
+main.iconbitmap("img/iconNoBG.ico")
 
 # 폰트 설정
 titleFont=customtkinter.CTkFont(family="나눔고딕",size=25,weight="bold")
@@ -44,9 +55,9 @@ main.frame1.grid_rowconfigure(3,weight=0)
 main.frame1.grid_rowconfigure(4,weight=0)  
 
 ## frame1 아이콘
-iconLight=Image.open("Img/iconLight.jpg")
+iconLight=Image.open("img/iconLight.jpg")
 iconLight=iconLight.resize((100,100))
-iconDark=Image.open("Img/iconDark.jpg")
+iconDark=Image.open("img/iconDark.jpg")
 iconDark=iconDark.resize((100,100))
 iconImage=customtkinter.CTkImage(light_image=iconLight,dark_image=iconDark,size=(100,100))
 main.iconLabel=customtkinter.CTkLabel(main.frame1,image=iconImage,text="")
@@ -138,8 +149,8 @@ main.frame6.grid_columnconfigure(1,weight=0)
 main.frame6.grid_columnconfigure(2,weight=1)
 
 #frame6 레이블1
-main.frame6Label1=customtkinter.CTkLabel(main.frame6,text="정보창 입니다.",width=100,font=infoFont)
-main.frame6Label1.grid(row=0,column=0,padx=20,pady=10,sticky="nsew")
+main.frame6Button1=customtkinter.CTkButton(main.frame6,command=0,text="예측시작",font=buttonFont,corner_radius=20,height=35)
+main.frame6Button1.grid(row=0,column=0,padx=20,pady=10)
 
 #frame6 레이블2
 main.frame6Label2=customtkinter.CTkLabel(main.frame6,text="50%",font=infoFont)
@@ -150,12 +161,7 @@ main.frame6progressbar1 = customtkinter.CTkProgressBar(main.frame6, orientation=
 main.frame6progressbar1.grid(row=0,column=2,padx=20,pady=10,sticky="ew")
 
 #탭뷰
-main.tabview = customtkinter.CTkTabview(main, width=250)
-main.tabview.grid(row=0, column=2,rowspan=4,padx=(20, 20), pady=(20, 20), sticky="nsew")
-main.tabview.add("  단순이동평균법  ")
-main.tabview.add(  "가중이동평균법  ")
-main.tabview.add("  지수평활법  ")
-main.tabview.add("  Tensorflow  ")
+reloadTabview()
 
 #기본 설정
 main.textbox.insert("0.0","환영합니다!\n\n"
@@ -168,4 +174,5 @@ main.textbox.insert("0.0","환영합니다!\n\n"
                     +"3. 지수평활법 (Exponential Smoothing)\n지수평활법은 과거 데이터에 지수적으로 감소하는 가중치를 적용하여 수요를 예측하는 방법입니다. 이 방법은 오래된 데이터보다 최근 데이터를 더 중시하여 예측의 정확성을 높입니다. 지수평활법의 핵심은 평활 상수(알파 값)인데,이 값은 0과 1 사이의 값으로,최근 데이터에 부여할 가중치를 결정합니다. 알파 값이 클수록 최근 데이터에 더 많은 가중치를 부여하게 됩니다. 예를 들어,알파 값이 0.8이라면 최근 데이터가 전체 예측값에 큰 영향을 미치게 됩니다.\n\n"
                     +"4. TensorFlow AI 예측 기능\n이 프로그램은 전통적인 통계적 기법 외에도 TensorFlow를 활용한 인공지능 기반 예측 기능을 제공합니다. 인공신경망(Artificial Neural Network)과 머신러닝(Machine Learning) 알고리즘을 사용하여 과거 데이터를 학습하고,복잡한 패턴을 분석하여 더 정확한 예측을 수행합니다. TensorFlow는 강력한 데이터 처리 및 예측 모델링 도구로,대량의 데이터를 빠르게 처리하고 고도의 예측을 가능하게 합니다.")
 main.textbox.configure(state="disabled")
+
 main.mainloop()
