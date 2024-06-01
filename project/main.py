@@ -16,6 +16,9 @@ customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "gre
 main.title("수평적 패턴의 수요 예측 프로그램")
 main.geometry(f"{1100}x{580}")
 
+# 변수 설정
+
+
 # configure grid layout (4x4)
 main.grid_columnconfigure(1, weight=1)
 main.grid_columnconfigure((2, 3), weight=0)
