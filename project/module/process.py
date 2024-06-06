@@ -1,15 +1,17 @@
 import os
 
-def settingGet(input):
+def settingGet():
     currentDir=os.path.dirname(os.path.abspath(__file__))
     settingPath=os.path.join(currentDir,'..','setting')
     with open(settingPath, 'r') as f:
         lines = [f.readline().strip() for _ in range(6)]
-
-    if input=="tabview":
-        return [lines[0],lines[1],lines[2],lines[3]]
+    return lines
 
 def settingEdit(input):
     currentDir=os.path.dirname(os.path.abspath(__file__))
     settingPath=os.path.join(currentDir,'..','setting')
-    pass
+    with open(settingPath,'w') as f:
+        for line in input:
+            line=str(line)
+            f.write(line +'\n')
+
