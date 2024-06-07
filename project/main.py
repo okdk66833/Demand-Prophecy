@@ -483,7 +483,7 @@ def resultTabview():
         tmp=[]
         tmp.append(numList[i])
         tmp.append(fee[i])
-        tmp.append(w[i])
+        if line[1]=='1': tmp.append(w[i])
         table.append(tmp)
     #print(table)
     main.table5=CTkTable(main.scrollableFrame6,row=feeI+1,column=2,values=table,corner_radius=5,font=textboxFont)
