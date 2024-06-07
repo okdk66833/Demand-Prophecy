@@ -1,9 +1,10 @@
 import tkinter as tk,tkinter.messagebox,customtkinter,tkinter.messagebox
 from CTkTable import *
 import os,sys,re
+os.environ['KERAS_BACKEND'] = 'tensorflow'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] ='0'
 import random,time
 from PIL import Image
-os.environ['TF_ENABLE_ONEDNN_OPTS'] ='0'
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
