@@ -637,7 +637,7 @@ def randomWeightFrame():
         adjustment=round(1-sum(normalizedF),2)
         normalizedF[0]+=adjustment
         if sum(normalizedF)==1: break
-
+    normalizedF.sort()
     for i in range(feeI):
         entryTmp=customtkinter.StringVar()
         weightInputList[i].configure(textvariable=entryTmp)
