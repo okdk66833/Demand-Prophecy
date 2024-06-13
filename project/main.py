@@ -1,3 +1,6 @@
+#설치 모듈: CTkTable,tensorflow,numpy,matplotlib,customtkinter
+#필요 파일: main.py,module폴더,setting
+
 import tkinter as tk,tkinter.messagebox,customtkinter,tkinter.messagebox
 from CTkTable import *
 import os,sys,re
@@ -637,7 +640,9 @@ def randomWeightFrame():
         adjustment=round(1-sum(normalizedF),2)
         normalizedF[0]+=adjustment
         if sum(normalizedF)==1: break
+
     normalizedF.sort()
+
     for i in range(feeI):
         entryTmp=customtkinter.StringVar()
         weightInputList[i].configure(textvariable=entryTmp)
