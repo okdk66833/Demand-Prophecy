@@ -1,5 +1,5 @@
 #설치 모듈: CTkTable,tensorflow,numpy,matplotlib,customtkinter
-#필요 파일: main.py,module폴더,setting
+#필요 파일: main.py,module폴더,img폴더,__pycache__폴더,setting
 
 import tkinter as tk,tkinter.messagebox,customtkinter,tkinter.messagebox
 from CTkTable import *
