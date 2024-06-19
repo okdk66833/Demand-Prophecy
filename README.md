@@ -44,4 +44,4 @@
 - 결과 출력: 예측된 다음 달 수요
 
 ## 요구 모듈
-- customtkinter,tensorflow
+- CTkTable,tensorflow,numpy,matplotlib,customtkinter
