@@ -1,5 +1,5 @@
 # 수평적 패턴의 수요 예측 프로그램
-![스크린샷 2024-08-20 214240](https://github.com/user-attachments/assets/b6c5f7f2-6eeb-46e3-8b1e-5e0a9b160caf)
+![스크린샷 2024-08-22 155740](https://github.com/user-attachments/assets/77a45b26-1f1a-4074-a6fd-400f33755c46)
 
 ## 개요
 추세, 계절적 패턴, 주기적 패턴이 없는 수요를 통계적 기법으로 분석하는 프로그램입니다.
