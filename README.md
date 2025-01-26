@@ -35,6 +35,7 @@ tensorflow
 numpy
 matplotlib
 customtkinter
+pillow
 ```
 
 ## 기타
