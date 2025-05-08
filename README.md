@@ -7,11 +7,16 @@
 2. 사용자로부터 예측 방법을 선택 받습니다. (단순이동평균법/가중이동평균법/지수평활법/tensorflow)
 3. 예측 방법에 따라 다음 달의 수요를 예측합니다.
 
-## 설치
-### 모듈
-```
-pip install CTkTable tensorflow numpy matplotlib customtkinter
-```
+## 포함된 라이브러리
+|이름|라이센스|저작권|
+|---|---|---|
+|customtkinter|MIT license|2024 Tom Schimansky|
+|CTkTable|MIT license|2024 Akash Bora|
+|tensorflow|Apache-2.0 license|2015 Google Inc.|
+|numpy|BSD 3-Clause License|2005-2023 NumPy Developers.|
+|matplotlib|Matplotlib License (based on PSF and BSD)|2002-2023 Matplotlib Development Team|
+
+
 
 ## 기타
 - 분류: 2024 대학교 프로젝트
