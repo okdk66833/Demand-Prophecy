@@ -3,6 +3,9 @@
 
 
 # 빌드
-build/*
-dist/*
-.spec
+Code/build/*
+Code/dist/*
+*.spec
+
+# 캐시
+*.pyc

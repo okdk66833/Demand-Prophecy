@@ -16,6 +16,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.ticker as ticker
 import module.process as ps,module.mathod as md
 
+sys.stdout = open(os.path.join(os.getcwd(), "log.txt"), "w", encoding="utf-8")
+sys.stderr = sys.stdout
+
 # 그래프 한글 출력
 plt.rcParams['font.family'] ='Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] =False
@@ -53,9 +56,9 @@ def infoWindow():
     # 텍스트박스
     info.textbox0=customtkinter.CTkTextbox(info,font=textboxFont)
     info.textbox0.grid(row=1,column=0,padx=20,pady=20,sticky="nsew")
-    info.textbox0.insert("0.0","경기대학교 인문사회과학전공자를위한파이썬활용\n\n"
-                    +"수평적 패턴의 수요 예측 프로그램 alpha 2.5\n\n"
-                    +"구성원\n조장: 이민호\n조원: 김도경, 남윤도, 허민준\n\n"
+    info.textbox0.insert("0.0","수평적 패턴의 수요 예측 프로그램 3.5\n\n"
+                    +"업데이트: 2025-05-08\n\n"
+                    +"라이선스: MIT License\n\n"
                     +"copyright 2024 all rights reserved."
     )
     info.textbox0.configure(state="disabled")
@@ -825,7 +828,7 @@ os.chdir(scripDir)
 
 # 메인 창
 main=customtkinter.CTk()
-
+main.iconbitmap("img/iconNoBG.ico")
 # 창 설정
 customtkinter.set_default_color_theme("green")  
 main.title("수평적 패턴의 수요 예측 프로그램")
