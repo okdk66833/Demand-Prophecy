@@ -1,11 +1,13 @@
-# vscode 폴더
+# vscode
 .vscode/*
 
-
-# 빌드
+# build
 src/build/*
 src/dist/*
-*.spec
+.spec
 
-# 캐시
-*/__pycache__/*
+# cache
+.pyc
+
+# executable
+*.exe
