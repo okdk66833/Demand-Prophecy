@@ -1,0 +1,12 @@
+# vscode 폴더
+.vscode/*
+
+
+# 빌드
+Code/build/*
+Code/dist/*
+*.spec
+
+# 캐시
+COde/__pycache__/*
+*.pyc
