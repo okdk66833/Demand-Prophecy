@@ -1,0 +1,8 @@
+# vscode 폴더
+.vscode/*
+
+
+# 빌드
+build/*
+dist/*
+.spec
