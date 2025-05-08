@@ -3,10 +3,9 @@
 
 
 # 빌드
-Code/build/*
-Code/dist/*
+src/build/*
+src/dist/*
 *.spec
 
 # 캐시
-COde/__pycache__/*
-*.pyc
+*/__pycache__/*
