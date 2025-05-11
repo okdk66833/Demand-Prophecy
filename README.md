@@ -13,9 +13,9 @@
 |---|---|---|
 |customtkinter|MIT license|2024 Tom Schimansky|
 |CTkTable|MIT license|2024 Akash Bora|
-|tensorflow|Apache-2.0 license|2015 Google Inc.|
-|numpy|BSD 3-Clause License|2005-2023 NumPy Developers.|
-|matplotlib|Matplotlib License (based on PSF and BSD)|2002-2023 Matplotlib Development Team|
+|tensorflow|Apache-2.0 license|2025 Google Inc.|
+|numpy|BSD 3-Clause License|2025 NumPy Developers|
+|matplotlib|Matplotlib License (based on PSF and BSD)|2025 Matplotlib Development Team|
 
 ## 기타
 - 분류: 2024 대학교 프로젝트
